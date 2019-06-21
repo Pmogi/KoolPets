@@ -13,13 +13,13 @@ Shouldn't have too much code here. Most of the heavy lifting should be done in s
 // project headers
 #include "pet.h"
 
-using namespace std; // using standard library namespace
+using namespace std; // using standard library namespace in main
 
-static bool petExist;
+static bool petExist; // for defining if save file exists or not on check
 
 
 int main(){
-	// load required data here / or create new file
+	// load required data here or acknowledge no file exists
 	{
 		
 		
@@ -44,7 +44,7 @@ int main(){
 	/*
 	else, using obtained variables from save file, assign them to pet object
 	*/
-	
+	cout << pet.getName() << ": I eat Jon, it's what I do" << endl;
 	
 	// main game loop
 	while (1){

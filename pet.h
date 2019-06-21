@@ -2,6 +2,9 @@
 
 #include <string>
 
+// Becuase the header is not in the namespace of std, you must include std::string to define
+// you're using the standard library, o.w. it doesn't know what library to pull from
+
 // Header guard
 #ifndef PET_H
 
@@ -10,8 +13,8 @@
 class basePet {
 	
 	private:
-		string name;
-		string type;
+		std::string name;
+		std::string type;
 		int happy;
 		int honger;
 		int chonk;
@@ -19,14 +22,18 @@ class basePet {
 	
 	public:
 		
+		basePet();
+		
 		// declerations of pet class functions
-		void basePet(); // constructor function
-		void assignName(string petName);
+		void assignName(std::string petName);
 		
 		int getHappy(); // :)
 		int getHonger();
 		int getChonk();
+		std::string getName();
 		
+		void loadPetSave(std::string sName, std::string sType,
+						int sHappy, int sHonger, int sChonk);
 	
 };
 
