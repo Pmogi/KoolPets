@@ -13,13 +13,45 @@ basePet::getChonk(){
 	return chonk;
 }
 
-basePet::basePet(string petName){
-	
-	cout << "What name would you like for your pet?\n> ";
+basePet::getName(){
+	return name;
+}
+
+basePet::getType(){
+	return type;
+}
+
+basePet::updateHappy(int newHappy){
+	happy = newHappy;
+}
+
+basePet::updateHonger(int newHonger){
+	honger = newHonger;
+}
+
+basePet::updateChonk(int newChonk){
+	chonk = newChonk;
+}
+
+basePet::updateName(string newName){
+	name = newName;
+}
+
+basePet::updateType(string newType){
+	type = newType;
+}
+
+
+basePet::basePet(){
+
+	cout << "What name would you like for your pet?\n";
 	cin >> name;
-	
-	happy = 0;
-	honger = 0;
-	chonk = 0;
-	
+	cout << "What kind of creature is your pet?\n";
+	cin >> type;
+
+	// Pet's mood starts at neutral
+	happy = 50;
+	honger = 50;
+	chonk = 50;
+
 }
