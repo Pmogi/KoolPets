@@ -21,10 +21,12 @@ class basePet {
 		
 		// declerations of pet class functions
 		void basePet(); // constructor function
+		void assignName(string petName);
 		
 		int getHappy(); // :)
 		int getHonger();
 		int getChonk();
+		
 	
 };
 

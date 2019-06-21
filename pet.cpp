@@ -1,25 +1,37 @@
 // Pet source file
 
 // implimentation of basePet class functions here
-basePet::getHappy(){
+int basePet::getHappy(){
 	return happy;
 }
 
-basePet::getHonger(){
+int basePet::getHonger(){
 	return honger;
 }
 
-basePet::getChonk(){
+int basePet::getChonk(){
 	return chonk;
 }
 
-basePet::basePet(string petName){
-	
-	cout << "What name would you like for your pet?\n> ";
-	cin >> name;
-	
+// constructor function
+void basePet::basePet(){
 	happy = 0;
 	honger = 0;
 	chonk = 0;
+	name = NULL;
+	type = "Slime";
 	
+}
+
+void basePet::assignName(string petName){
+	name = petName;
+}
+
+// load variables from save file to pet object
+void basePet::loadPetSave(string sName, string sType, int sHappy, int sHonger, int sChonk){
+	name = sName;
+	type = sType;
+	happy = sHappy;
+	honger = sHonger;
+	chonk = sChonk;
 }
